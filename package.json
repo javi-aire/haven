@@ -23,6 +23,7 @@
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.0.4",
     "gulp-fontmin": "^0.7.4",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.2.0",
