@@ -21,7 +21,7 @@ const paths = {
   images: './client/assets/images/**/*',
   fonts: './client/assets/fonts/**/*',
   html: './client/*.html',
-  css: './client/scss/**/*.scss',
+  css: './client/css/**/*.scss',
   dest: 'dist'
 };
 

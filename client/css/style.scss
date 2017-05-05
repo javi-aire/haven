@@ -1,3 +1,40 @@
+body {
+  background: url('../assets/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 1600px;
+  max-width: 100%;
+}
+
+
+
+
+/* Footer has a height: 202px */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: -5em;
+  left: 0;
+  padding: 7em 0 5.15em 0;
+  background-color: black;
+  text-align: center;
+}
+
+.footer:before {
+  content: "";
+  position: absolute;
+  background-image: url(../assets/images/footer/footer-background-crowd.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  bottom: 12em;
+  right: 0;
+}
+
+
 .ribbon {
  font-size: 16px !important;
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
@@ -9,7 +46,7 @@
  color: #fff;
  text-align: left;
  padding: .5em 1.5em; /* Adjust to suit */
- margin: 2em auto 3em;
+ margin: 15em 6em;
 
  /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
@@ -52,3 +89,33 @@
  left: 0;
  border-width: 1em 0 0 1em;
 }
+
+.ink-navigation ul.gnc-nav {
+  border-bottom: 3px solid #d71921;
+  margin: 0 auto;
+  width: 71%;
+}
+
+.ink-navigation ul.menu.horizontal li.icon {
+  float: right;
+  background-color: #d71921;
+  display: inline-block;
+}
+
+#fb-icon:before {
+  content: "SHARE";
+  color: #fff;
+  font-size: 12px;
+  float: left;
+  position: relative;
+  right: 2em;
+  top: 2em;
+}
+
+#fb-icon {
+  margin-left: 2em;
+}
+
+/*.ink-navigation ul.menu.horizontal li.icon:first-child:before {
+  content: "SHARE";
+}*/
