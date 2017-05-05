@@ -31,7 +31,6 @@ const paths = {
 gulp.task("sass", () => {
   gulp.src(paths.css)
       .pipe(sass())
-      .pipe(cssMin())
       .pipe(gulp.dest(`${paths.dest}/css`))
       .pipe(browser.reload({
         stream: true
@@ -52,7 +51,7 @@ gulp.task('html', ['sass'], () => {
 */
 gulp.task('images', () => {
   gulp.src(paths.images)
-    .pipe(imageMin())
+    .pipe(imgMin())
     .pipe(gulp.dest(`${paths.dest}/assets/images`));
 });
 
