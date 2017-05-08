@@ -313,3 +313,8 @@ body {
   position: relative;
   bottom: 1em;
 }
+
+.ink-dropdown ul.dropdown-menu li.submenu > a:after, .ink-dropdown ul.dropdown li.submenu > a:after, .ink-navigation ul.dropdown-menu li.submenu > a:after, .ink-navigation ul.dropdown li.submenu > a:after{
+  content: "\f078";
+  color: #d71921;
+}
