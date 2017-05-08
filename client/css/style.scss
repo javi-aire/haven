@@ -240,6 +240,7 @@ body {
   width: 37%;
 }
 
+
 .official-rules {
   text-decoration: underline;
   color: #d71921;
@@ -301,4 +302,14 @@ body {
   border-style: dashed;
   border-color: #810f14 transparent transparent transparent;
   bottom: -1em;
+}
+
+.captcha {
+  position: relative;
+  bottom: 1.25em;
+}
+
+.legend {
+  position: relative;
+  bottom: 1em;
 }

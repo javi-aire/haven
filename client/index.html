@@ -5,6 +5,9 @@
 
     <!-- inks css file -->
     <link rel="stylesheet" type="text/css" href="http://fastly.ink.sapo.pt/3.1.10/css/ink.css">
+    <!-- font awesome for icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
@@ -44,13 +47,13 @@
           <div class="all-50 info-container">
             <form class="ink-form">
               <div class="column-group uppercase">
-                <div class="control-group all-50 top-space">
+                <div class="control-group all-50 quarter-top-space">
                   <label for="first name">First Name</label>
                   <div class="control info-input">
                     <input type="text" name="first">
                   </div>
                 </div>
-                <div class="control-group all-50 top-space">
+                <div class="control-group all-50 quarter-top-space">
                   <label for="last name">Last Name</label>
                   <div class="control info-input">
                     <input type="text" name="last">
@@ -68,10 +71,23 @@
                     <input type="text" name="email">
                   </div>
                 </div>
-                <div class="control-group all-50 submenu">
-                  <label for="metro area">Select Your Metro Area</label>
+                <div class="control-group all-50 ink-navigation">
+                  <label for="metro-area">Select Your Metro Area</label>
                   <ul class="control dropdown info-input">
-                    <input type="text" name="metro">
+                    <li class="submenu">
+                      <a href="#">Select</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Ontario</a></li>
+                        <li><a href="#">West Covina</a></li>
+                        <li><a href="#">DTLA</a></li>
+                        <li><a href="#">Silverlake</a></li>
+                        <li><a href="#">Hollywood</a></li>
+                        <li><a href="#">West Hollywood</a></li>
+                        <li><a href="#">Beverly Hills</a></li>
+                        <li><a href="#">West LA</a></li>
+                        <li><a href="#">Santa Monica</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </div>
                 <div class="control-group all-50">
@@ -97,7 +113,7 @@
                     <li><input type="checkbox" id="rules" name="rules" value="Yes I agree to the Offical Rules"><label for="rules">I agree to the <a class="official-rules" href="/official-rules/" target="_blank">Offical Rules</a></label></li>
                     <li><input type="checkbox" id="gnc-offers" name="gnc-offers" value="Yes, I would like to receive special offers from GNC"><label for="gnc-offers">Yes, I would like to receive special offers from GNC.</label><span class="optional"><sup>*</sup></span></li>
                     <li><input type="checkbox" id="concert-info" name="concert-info" value="Yes, I would like to receive concert information from Live Nation"><label for="concert-info">Yes, I would like to receive concert information from Live Nation.</label><span class="optional"><sup>*</sup></span></li>
-                    <li><p class="small"><span class="optional">*</span>Optional</p></li>
+                    <li><p class="legend small"><span class="optional">*</span>Optional</p></li>
                   </ul>
                 </div>
                 <div class="control-group all-100 double-bottom-padding captcha">
