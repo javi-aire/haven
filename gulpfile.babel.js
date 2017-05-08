@@ -19,7 +19,7 @@ const paths = {
   src: 'client',
   js: './client/js/**/*.js',
   images: './client/assets/images/**/*',
-  fonts: './client/assets/fonts/**/*',
+  fonts: './client/assets/fonts/**/*.{eot,woff,ttf,svg}',
   html: './client/*.html',
   css: './client/css/**/*.scss',
   dest: 'dist'
@@ -29,7 +29,7 @@ const paths = {
 * compile/minify sass files
 */
 gulp.task("sass", () => {
-  gulp.src(paths.css)
+  return gulp.src(paths.css)
       .pipe(sass())
       .pipe(gulp.dest(`${paths.dest}/css`))
       .pipe(browser.reload({
@@ -41,7 +41,7 @@ gulp.task("sass", () => {
 * minify html but compiles sass first
 */
 gulp.task('html', ['sass'], () => {
-  gulp.src(paths.html)
+  return gulp.src(paths.html)
     .pipe(htmlMin({collapseWhitespace: true}))
     .pipe(gulp.dest(`${paths.dest}/`));
 });
@@ -50,7 +50,7 @@ gulp.task('html', ['sass'], () => {
 * minify images
 */
 gulp.task('images', () => {
-  gulp.src(paths.images)
+  return gulp.src(paths.images)
     .pipe(imgMin())
     .pipe(gulp.dest(`${paths.dest}/assets/images`));
 });
@@ -59,7 +59,7 @@ gulp.task('images', () => {
 * minify font
 */
 gulp.task('font', () => {
-  gulp.src(paths.fonts)
+  return gulp.src(paths.fonts)
     .pipe(fontMin())
     .pipe(gulp.dest(`${paths.dest}/assets/fonts`));
 });
@@ -68,7 +68,7 @@ gulp.task('font', () => {
 * compile and minify JS
 */
 gulp.task('babel', () => {
-  gulp.src(paths.js)
+  return gulp.src(paths.js)
     .pipe(babel())
     .pipe(jsMin())
     .pipe(gulp.dest(`${paths.dest}/js`));

@@ -1,3 +1,78 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-weight: lighter;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*========== Custom Styles Below ==========*/
+$link-color: #d71921;
+
+@font-face {
+  font-family: 'Din Condensed Bold';
+  src: url("../assets/fonts/din-condensed-bold.ttf");
+  src: url("../assets/fonts/din-condensed-bold.woff") format("woff"),
+       url("../assets/fonts/din-condensed-bold.ttf") format("truetype"),
+       url("../assets/fonts/din-condensed-bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Mocha Mattari";
+  src: url("../assets/fonts/MochaMattari.eot"),
+       url("../assets/fonts/MochaMattari.woff") format("woff"),
+       url("../assets/fonts/MochaMattari.ttf") format("truetype"),
+       url("../assets/fonts/MochaMattari.svg") format("svg");
+}
+
+
+html,body {
+  box-sizing: border-box;
+  font-family: 'Din Condensed Bold', Helvetica, Arial;
+}
+
+
 body {
   background: url('../assets/images/background.png');
   background-size: cover;
@@ -8,6 +83,9 @@ body {
   max-width: 100%;
 }
 
+ button {
+  font-family: 'Mocha Mattari';
+}
 
 
 
@@ -32,21 +110,22 @@ body {
   background-size: 100% 100%;
   bottom: 12em;
   right: 0;
+  z-index: -1;
 }
 
 
 .ribbon {
- font-size: 16px !important;
+ font-size: 40px;
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
 
- width: 25%;
+ width: 75%;
 
  position: relative;
  background: #d71921;
  color: #fff;
  text-align: left;
- padding: .5em 1.5em; /* Adjust to suit */
- margin: 15em 6em;
+ padding: .5em 1em; /* Adjust to suit */
+ /*margin: 1em 0;*/
 
  /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
 }
@@ -55,7 +134,7 @@ body {
  position: absolute;
  display: block;
  bottom: -1em;
- border: 1.5em solid #d71921;
+ border: 2.5em solid #d71921;
  z-index: -1;
 }
 
@@ -63,13 +142,13 @@ body {
  content: "";
  position: absolute;
  display: block;
- border: 1.65em solid #d71921;
+ border: 2.65em solid #d71921;
  z-index: -1;
 }
 
 .ribbon:before {
- left: -6.5em;
- border-right-width: 6em;
+ left: -12.5em;
+ border-right-width: 11.5em;
 }
 .ribbon:after {
  right: -3em;
@@ -77,7 +156,7 @@ body {
  border-left-width: 1.5em;
  border-right-color: transparent;
 }
-.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+.ribbon .ribbon-content:before {
  content: "";
  position: absolute;
  display: block;
@@ -87,7 +166,7 @@ body {
 }
 .ribbon .ribbon-content:before {
  left: 0;
- border-width: 1em 0 0 1em;
+ border-width: 1em 0 0 1.5em;
 }
 
 .ink-navigation ul.gnc-nav {
@@ -96,26 +175,130 @@ body {
   width: 71%;
 }
 
-.ink-navigation ul.menu.horizontal li.icon {
+.ink-navigation ul.menu.horizontal li.social {
   float: right;
   background-color: #d71921;
+}
+
+.ink-navigation ul.menu.horizontal a.icon {
   display: inline-block;
 }
 
-#fb-icon:before {
+.ink-navigation ul.menu.horizontal a.icon:hover {
+  background-color: transparent;
+}
+
+.ink-navigation ul.menu.horizontal li.social:before {
   content: "SHARE";
   color: #fff;
   font-size: 12px;
   float: left;
   position: relative;
-  right: 2em;
-  top: 2em;
+  right: 0;
+  top: 1.5em;
+  left: 2em;
 }
 
 #fb-icon {
-  margin-left: 2em;
+  position: relative;
+  left: 1.5em;
 }
 
-/*.ink-navigation ul.menu.horizontal li.icon:first-child:before {
-  content: "SHARE";
-}*/
+/* Left side of 50/50 grid */
+.ttr-sweep{
+  position: relative;
+  top: 1em;
+  left: 8em;
+  width: 75%;
+}
+
+.prize-desc {
+  position: relative;
+  bottom: 1em;
+  left: 11em;
+}
+
+.prizes {
+  list-style: none;
+}
+
+.prize {
+  height: auto;
+  line-height: 2em;
+}
+
+.info-input {
+  width: 90%;
+}
+
+.info-container {
+  background: #fff;
+  border: 2px solid #D3D4D4;
+  opacity: .9;
+  position: relative;
+  top: 2.65em;
+  width: 37%;
+}
+
+.official-rules {
+  text-decoration: underline;
+  color: #d71921;
+}
+
+.optional {
+  color: #d71921;
+}
+
+.control-group:nth-child(odd){
+  padding-left: .5em;
+}
+
+.control-group:nth-last-of-type(-n+2){
+  padding-left: .5em;
+}
+
+.ink-form .control-group {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+[alt^=captcha] {
+  width: 60%;
+}
+
+.submit-btn {
+  background: #d71921;
+  color: #fff;
+  border: 1px solid #d71921;
+  position: relative;
+  font-size: 44px;
+  top: .5em;
+}
+
+.submit-btn:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border: .8em solid #d71921;
+ z-index: -1;
+}
+
+.submit-btn:after {
+ right: -.80em;
+ top: 0;
+}
+
+.submit-btn .submit-btn-content:after {
+ left: 4.30em;
+ top: 1.55em;
+ border-width: .5em .5em 0 0;
+}
+
+.submit-btn .submit-btn-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: dashed;
+  border-color: #810f14 transparent transparent transparent;
+  bottom: -1em;
+}

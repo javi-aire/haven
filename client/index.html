@@ -16,23 +16,115 @@
     <div class="container">
       <nav class="ink-navigation">
         <ul class="menu horizontal black gnc-nav">
-          <li><a href="/gnc"><img src="./assets/images/header/gnc-logo.png" /></a></li>
-          <li><a href="/live-nation"><img src="./assets/images/header/live-nation.png" /></a></li>
-          <li id="fb-icon" class="icon">
-            <a href="https://www.twitter.com/havenagency/" target="_blank"><img src="./assets/images/social/twitter-icon.png" alt="twitter"/></a>
-            <a href="https://www.facebook.com/havenagency/" target="_blank"><img src="./assets/images/social/facebook.png" alt="facebook"/></a>
+          <li class="nav-links"><a href="/gnc"><img src="./assets/images/header/gnc-logo.png" /></a></li>
+          <li class="nav-links"><a href="/live-nation"><img src="./assets/images/header/live-nation.png" /></a></li>
+          <li class="social nav-links">
+            <a id="fb-icon" class="icon" href="https://www.facebook.com/havenagency/" target="_blank"><img src="./assets/images/social/facebook.png" alt="facebook"/></a>
+            <a class="icon" href="https://www.twitter.com/havenagency/" target="_blank"><img src="./assets/images/social/twitter-icon.png" alt="twitter"/></a>
           </li>
         </ul>
       </nav>
-      <h1 class="ribbon">
-         <strong class="ribbon-content">Enter for a chance to win a Rock Flight&reg; to a Live Nation&reg; concert of your choice!<sup>*</sup></strong>
-      </h1>
-    </div>
 
+      <div class="ink-grid">
+        <div class="column-group">
+          <div class="all-50 gnc-sweeps">
+            <img class="ttr-sweep" src="./assets/images/content/gnc-sweepstakes.png" alt="gnc-sweeps"/>
+            <div class="ribbon">
+               <p class="ribbon-content">Enter for a chance to win a Rock Flight<sup>&reg;</sup> to a Live Nation<sup>&reg;</sup> concert of your choice!<sup>*</sup></p>
+            </div>
+            <div class="prize-desc">
+              <h3>1 Grand Prize Winner will receive:</h3>
+              <ul class="prizes">
+                <li class="prize"><p>2 tickets to a Live Nation concert in the U.S.</p></li>
+                <li class="prize"><p>Airfare &amp; hotel accommodations for 2</p></li>
+                <li class="prize"><p>$200 Cash gift card</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="all-50 info-container">
+            <form class="ink-form">
+              <div class="column-group uppercase">
+                <div class="control-group all-50 top-space">
+                  <label for="first name">First Name</label>
+                  <div class="control info-input">
+                    <input type="text" name="first">
+                  </div>
+                </div>
+                <div class="control-group all-50 top-space">
+                  <label for="last name">Last Name</label>
+                  <div class="control info-input">
+                    <input type="text" name="last">
+                  </div>
+                </div>
+                <div class="control-group all-50">
+                  <label for="email">Email</label>
+                  <div class="control info-input">
+                    <input type="text" name="email">
+                  </div>
+                </div>
+                <div class="control-group all-50">
+                  <label for="email2">Confirm Email</label>
+                  <div class="control info-input">
+                    <input type="text" name="email">
+                  </div>
+                </div>
+                <div class="control-group all-50 submenu">
+                  <label for="metro area">Select Your Metro Area</label>
+                  <ul class="control dropdown info-input">
+                    <input type="text" name="metro">
+                  </ul>
+                </div>
+                <div class="control-group all-50">
+                  <label for="zip">Zip Code</label>
+                  <div class="control info-input">
+                    <input type="text" name="zip">
+                  </div>
+                </div>
+                <div class="control-group all-100">
+                  <label for="phone" class="phone">Phone Number <span class="lowercase small">(used only to contact winners)</span><br></label>
+                  <div class="control all-15 quarter-right-space">
+                    <input type="text" name="area code">
+                  </div>
+                  <div class="control all-15 quarter-right-space">
+                    <input type="text" name="tele">
+                  </div>
+                  <div class="control all-15 quarter-right-space">
+                    <input type="text" name="phone-num">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <ul class="control unstyled">
+                    <li><input type="checkbox" id="rules" name="rules" value="Yes I agree to the Offical Rules"><label for="rules">I agree to the <a class="official-rules" href="/official-rules/" target="_blank">Offical Rules</a></label></li>
+                    <li><input type="checkbox" id="gnc-offers" name="gnc-offers" value="Yes, I would like to receive special offers from GNC"><label for="gnc-offers">Yes, I would like to receive special offers from GNC.</label><span class="optional"><sup>*</sup></span></li>
+                    <li><input type="checkbox" id="concert-info" name="concert-info" value="Yes, I would like to receive concert information from Live Nation"><label for="concert-info">Yes, I would like to receive concert information from Live Nation.</label><span class="optional"><sup>*</sup></span></li>
+                    <li><p class="small"><span class="optional">*</span>Optional</p></li>
+                  </ul>
+                </div>
+                <div class="control-group all-100 double-bottom-padding captcha">
+                  <img src="./assets/images/content/captcha.png" alt="captcha" />
+                  <button class="ink-button uppercase submit-btn" href="/submit"><p class="submit-btn-content">Enter Now</p></button>
+                </div>
+                <!-- <div class="control-group all-50 submit-btn">
+                </div> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="footer">test footer</div>
 <!-- <img src="./assets/images/footer/footer-background.png" alt="crowd" /> -->
-    <!-- inks js bundle -->
+    <!-- inks js bundle                <div class="control-group all-15">
+                  <div class="control">
+                    <input type="text" name="num" id="email2">
+                  </div>
+                </div>
+                <div class="control-group all-15">
+                  <div class="control">
+                    <input type="text" name="num" id="email2">
+                  </div>
+                </div> -->
     <script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.10/js/ink-all.js"></script>
   </body>
 </html>
