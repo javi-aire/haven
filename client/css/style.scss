@@ -127,7 +127,7 @@ button {
 }
 
 
-/*======== Entry Info Ribbon (left side) ========*/
+/*======== Sweeps Info Ribbon (left side) ========*/
 .ribbon {
  font-size: 2em;
  width: 70%; /* how far ribbon extends */
@@ -142,6 +142,15 @@ button {
   width: 75%;
   font-size: 1em;
   margin: 2em 0 0 3em;
+ }
+
+ @media screen and (min-width: 641px){
+  font-size: 1.5em;
+  margin: 2em 0 0 3em;
+ }
+
+ @media screen and (min-width: 961px){
+  width: 65%;
  }
 }
 
@@ -181,8 +190,12 @@ button {
  border: 1.5em solid #d71921;
  z-index: -1;
 
- @media screen and (max-width: 640px){
+ @media screen and (max-width: 960px){
   border: 1.5em solid #d71921;
+ }
+
+ @media screen and (min-width: 961px){
+  border: 2em solid #d71921;
  }
 
 }
@@ -204,9 +217,14 @@ button {
   @media screen and (max-width: 640px){
     left: 3em;
   }
+
+  @media screen and (min-width: 961px){
+    width: 65%;
+  }
 }
 
 .prize-desc {
+  box-sizing: border-box;
   position: relative;
   bottom: 1em;
   left: 11em;
@@ -214,6 +232,16 @@ button {
   @media screen and (max-width: 640px){
     left: 1em;
     top: .25em;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 960px){
+    left: 8em;
+    width: 70%;
+  }
+
+  @media screen and (min-width: 961px){
+    top: 3em;
+    left: 4em;
   }
 }
 
@@ -262,7 +290,7 @@ button {
   top: .5em;
   width: 37%;
 
-  @media screen and (max-width: 640px){
+  @media screen and (max-width: 960px){
     width: 100%;
   }
 }
@@ -282,7 +310,7 @@ button {
 }
 
 .control-group {
-  @media screen and (max-width: 640px){
+  @media screen and (max-width: 960px){
     width: 100%;
     padding-left: .5em;
   }
@@ -298,7 +326,7 @@ button {
 }
 
 [alt^=captcha] {
-  @media screen and (min-width){
+  @media screen and (min-width: 960px){
     width: 60%;
   }
 }
@@ -310,9 +338,14 @@ button {
   position: relative;
   font-size: 44px;
   top: .5em;
+  left: .75em;
 
-  @media screen and (min-width: 640px){
+  @media screen and (min-width: 640px) and (max-width: 795px){
     left: 1.5em;
+  }
+
+  @media screen and (min-width: 796px) and (max-width: 960px){
+    left: 2em;
   }
 }
 
@@ -330,17 +363,51 @@ button {
 }
 
 .submit-btn:after {
- @media screen and (min-width: 640px){
+ @media screen and (min-width: 640px), (max-width: 795px){
    right: -.80em;
    top: 0;
+ }
+
+  @media screen and (min-width: 796px) and (max-width: 960px){
+    right: -2.8em;
+    top: 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 961px){
+    right: -2.45em;
+    width: 53%;
+  }
+
+ @media screen and (min-width: 1386px) {
+  right: .55em;
+  width: 53%;
  }
 }
 
 .submit-btn .submit-btn-content:after {
- @media screen and (min-width: 640px){
+ @media screen and (min-width: 640px), (max-width: 795px){
    left: 4.30em;
    top: 1.55em;
    border-width: .5em .5em 0 0;
+ }
+
+ @media screen and (min-width: 796px) and (max-width: 960px){
+  left: 6.3em;
+  top: 1.55em;
+  border-width: .5em .5em 0 0;
+ }
+
+ @media screen and (min-width: 961px) {
+  left: 6em;
+  top: 1.55em;
+  border-width: .5em .5em 0 0;
+ }
+
+ @media screen and (min-width: 1386px) {
+  left: 3.5em;
+  top: 1.55em;
+  border-width: .5em .5em 0 0;
  }
 
 }
@@ -401,8 +468,12 @@ button {
   text-align: center;
   color: #373839;
 
-  @media screen and (max-width: 640px){
+  @media screen and (max-width: 960px){
     bottom: -8em;
+  }
+
+  @media screen and (min-width: 961px){
+    bottom: -5em;
   }
 }
 
@@ -434,5 +505,10 @@ button {
   @media screen and (max-width: 640px){
     background-size: 100% 32%;
     bottom: 4em;
+  }
+
+
+  @media screen and (min-width: 641px) and (max-width: 960px){
+    bottom: 6em;
   }
 }
