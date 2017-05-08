@@ -7,8 +7,8 @@ Haven Agency Phase 2 Exercise (Javier Williams)
 
 ## installation
 1. Clone the repo then in your CLI:
-> npm install
-> gulp
+2. > npm install
+3. > gulp
 
 Browser-sync will inform you of the port, and you should be all set!
 
