@@ -65,7 +65,7 @@ gulp.task('font', () => {
 });
 
 /**
-* compile and minify JS
+* compile and minify JS (even though there isn't any)
 */
 gulp.task('babel', () => {
   return gulp.src(paths.js)
@@ -102,9 +102,18 @@ gulp.task('serve', () => {
   });
 });
 
+
 /*
-* default task -- uses run-equence to build everything on the 'gulp' cmd
+* uses run-sequence to run every task in order
+*/
+gulp.task('build', () => {
+  return seq('sass', 'html', 'images', 'font', 'watch');
+});
+
+
+/*
+* default task -- calls the build command
 */
 gulp.task('default', (done) => {
-  seq('build', 'serve', 'watch', done);
+  seq('build', done);
 });

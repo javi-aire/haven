@@ -190,14 +190,6 @@ button {
  border: 1.5em solid #d71921;
  z-index: -1;
 
- @media screen and (max-width: 960px){
-  border: 1.5em solid #d71921;
- }
-
- @media screen and (min-width: 961px){
-  border: 2em solid #d71921;
- }
-
 }
 
 .ribbon:after {
