@@ -48,8 +48,6 @@ table {
 }
 
 /*========== Custom Styles Below ==========*/
-$link-color: #d71921;
-
 @font-face {
   font-family: 'Din Condensed Bold';
   src: url("../assets/fonts/din-condensed-bold.ttf");
@@ -82,64 +80,54 @@ body {
   max-width: 100%;
 }
 
- button {
+button {
   font-family: 'Mocha Mattari';
 }
 
-.bullet-icon {
-  display: inline;
-  font-size: 32px;
-  position: relative;
-  top: 0.25em;
-  left: .5em;
+/*======== Nav bar ========*/
+.ink-navigation ul.gnc-nav {
+  border-bottom: 3px solid #d71921;
+  margin: 0 auto;
+  width: 71%;
+}
 
-  &-h3 {
-    font-size: 34px;
-    position: relative;
-    top: .75em;
+.ink-navigation ul li.nav-links {
+  @media screen and (max-width: 640px){
+    margin-left: 4em;
   }
 }
 
-
-/* Footer has a height: 202px */
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 2.25em 0 0 0;
-  background-color: black;
-  text-align: center;
-  color: #373839;
+.ink-navigation ul.menu.horizontal li.social {
+  float: right;
+  background-color: #d71921;
 }
 
-.disclaimer {
+.ink-navigation ul.menu.horizontal a.icon {
+  display: inline-block;
+}
+
+.ink-navigation ul.menu.horizontal a.icon:hover {
+  background-color: transparent;
+}
+
+.ink-navigation ul.menu.horizontal li.social:before {
+  content: "SHARE";
+  color: #fff;
   font-size: 12px;
+  float: left;
   position: relative;
-  bottom: 2.5em;
-  width: 60%;
-  margin: 0 auto;
-}
-
-.disclaimer-info:not(:last-child){
-  padding-bottom: 1em;
-}
-
-
-.footer:before {
-  content: "";
-  position: absolute;
-  background-image: url(../assets/images/footer/footer-background-crowd.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  bottom: 6em;
   right: 0;
-  z-index: -1;
+  top: 1.5em;
+  left: 2em;
+}
+
+#fb-icon {
+  position: relative;
+  left: 1.5em;
 }
 
 
+/*======== Entry Info Ribbon (left side) ========*/
 .ribbon {
  font-size: 2em;
  width: 70%; /* how far ribbon extends */
@@ -149,7 +137,13 @@ body {
  text-align: center;
  padding: .5em 1em; /* content padding */
  margin: 1em 0 0 3em; /* position of ribbon */
+
+ @media screen and (max-width: 640px){
+  width: 75%;
+  font-size: 1em;
+  margin: 2em 0 0 3em;
  }
+}
 
 
 .ribbon:before {
@@ -186,6 +180,11 @@ body {
  display: block;
  border: 1.5em solid #d71921;
  z-index: -1;
+
+ @media screen and (max-width: 640px){
+  border: 1.5em solid #d71921;
+ }
+
 }
 
 .ribbon:after {
@@ -195,54 +194,27 @@ body {
  border-right-color: transparent;
 }
 
-
-.ink-navigation ul.gnc-nav {
-  border-bottom: 3px solid #d71921;
-  margin: 0 auto;
-  width: 71%;
-}
-
-.ink-navigation ul.menu.horizontal li.social {
-  float: right;
-  background-color: #d71921;
-}
-
-.ink-navigation ul.menu.horizontal a.icon {
-  display: inline-block;
-}
-
-.ink-navigation ul.menu.horizontal a.icon:hover {
-  background-color: transparent;
-}
-
-.ink-navigation ul.menu.horizontal li.social:before {
-  content: "SHARE";
-  color: #fff;
-  font-size: 12px;
-  float: left;
-  position: relative;
-  right: 0;
-  top: 1.5em;
-  left: 2em;
-}
-
-#fb-icon {
-  position: relative;
-  left: 1.5em;
-}
-
-/* Left side of 50/50 grid */
+/*======== Left side of 50/50 grid ========*/
 .ttr-sweep{
   position: relative;
   top: 1em;
   left: 8em;
   width: 75%;
+
+  @media screen and (max-width: 640px){
+    left: 3em;
+  }
 }
 
 .prize-desc {
   position: relative;
   bottom: 1em;
   left: 11em;
+
+  @media screen and (max-width: 640px){
+    left: 1em;
+    top: .25em;
+  }
 }
 
 .prizes {
@@ -255,6 +227,29 @@ body {
   line-height: 2em;
 }
 
+.bullet-icon {
+  display: inline;
+  font-size: 1.5em;
+  position: relative;
+  top: 0.25em;
+  left: .5em;
+
+  &-h3 {
+    font-size: 2em;
+    position: relative;
+    top: .75em;
+  }
+
+  @media screen and (max-width: 640px){
+    font-size: 1.25em;
+
+    &-h3 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+/*======== Right side of 50/50 grid ========*/
 .info-input {
   width: 90%;
 }
@@ -266,6 +261,10 @@ body {
   position: relative;
   top: .5em;
   width: 37%;
+
+  @media screen and (max-width: 640px){
+    width: 100%;
+  }
 }
 
 
@@ -274,17 +273,19 @@ body {
   color: #d71921;
 }
 
-.disclaimer-links:nth-last-of-type(-n+2){
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-}
-
 .optional {
   color: #d71921;
 }
 
 .control-group:nth-child(odd){
   padding-left: .5em;
+}
+
+.control-group {
+  @media screen and (max-width: 640px){
+    width: 100%;
+    padding-left: .5em;
+  }
 }
 
 .control-group:nth-last-of-type(-n+2){
@@ -297,7 +298,9 @@ body {
 }
 
 [alt^=captcha] {
-  width: 60%;
+  @media screen and (min-width){
+    width: 60%;
+  }
 }
 
 .submit-btn {
@@ -307,6 +310,10 @@ body {
   position: relative;
   font-size: 44px;
   top: .5em;
+
+  @media screen and (min-width: 640px){
+    left: 1.5em;
+  }
 }
 
 .submit-btn:after {
@@ -315,17 +322,27 @@ body {
  display: block;
  border: .8em solid #d71921;
  z-index: -1;
+
+
+ @media screen and (max-width: 640px){
+    border: none;
+  }
 }
 
 .submit-btn:after {
- right: -.80em;
- top: 0;
+ @media screen and (min-width: 640px){
+   right: -.80em;
+   top: 0;
+ }
 }
 
 .submit-btn .submit-btn-content:after {
- left: 4.30em;
- top: 1.55em;
- border-width: .5em .5em 0 0;
+ @media screen and (min-width: 640px){
+   left: 4.30em;
+   top: 1.55em;
+   border-width: .5em .5em 0 0;
+ }
+
 }
 
 .submit-btn .submit-btn-content:after {
@@ -335,6 +352,10 @@ body {
   border-style: dashed;
   border-color: #810f14 transparent transparent transparent;
   bottom: -1em;
+
+  @media screen and (max-width: 640px){
+    border: none;
+  }
 }
 
 .submit-btn:hover {
@@ -346,9 +367,20 @@ body {
   bottom: 1em;
 }
 
+.checkboxes {
+  @media screen and (max-width: 640px){
+    font-size: .85em;
+    top: .5em;
+  }
+}
+
 .legend {
   position: relative;
   bottom: 1em;
+
+  @media screen and (max-width: 640px){
+    bottom: 1.5em;
+  }
 }
 
 .ink-dropdown ul.dropdown-menu li.submenu > a:after, .ink-dropdown ul.dropdown li.submenu > a:after, .ink-navigation ul.dropdown-menu li.submenu > a:after, .ink-navigation ul.dropdown li.submenu > a:after{
@@ -356,4 +388,51 @@ body {
   color: #d71921;
   position: relative;
   left: 6em;
+}
+
+/*======== Footer ========*/
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2.25em 0 0 0;
+  background-color: black;
+  text-align: center;
+  color: #373839;
+
+  @media screen and (max-width: 640px){
+    bottom: -8em;
+  }
+}
+
+.disclaimer {
+  font-size: 12px;
+  position: relative;
+  bottom: 2.5em;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.disclaimer-info:not(:last-child){
+  padding-bottom: 1em;
+}
+
+
+.footer:before {
+  content: "";
+  position: absolute;
+  background-image: url(../assets/images/footer/footer-background-crowd.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  bottom: 6em;
+  right: 0;
+  z-index: -1;
+
+  @media screen and (max-width: 640px){
+    background-size: 100% 32%;
+    bottom: 4em;
+  }
 }
