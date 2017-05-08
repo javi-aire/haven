@@ -79,7 +79,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 1600px;
   max-width: 100%;
 }
 
@@ -115,47 +114,31 @@ body {
 
 
 .ribbon {
- font-size: 40px;
- /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-
- width: 75%;
-
+ font-size: 2em;
+ width: 70%; /* how far ribbon extends */
  position: relative;
  background: #d71921;
  color: #fff;
- text-align: left;
- padding: .5em 1em; /* Adjust to suit */
- /*margin: 1em 0;*/
+ text-align: center;
+ padding: .5em 1em; /* content padding */
+ margin: 1em 0 0 3em; /* position of ribbon */
+ }
 
- /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
-}
+
 .ribbon:before {
  content: "";
  position: absolute;
  display: block;
  bottom: -1em;
- border: 2.5em solid #d71921;
- z-index: -1;
-}
-
-.ribbon:after {
- content: "";
- position: absolute;
- display: block;
- border: 2.65em solid #d71921;
+ border: 1.5em solid #d71921;
  z-index: -1;
 }
 
 .ribbon:before {
- left: -12.5em;
+ left: -11.5em;
  border-right-width: 11.5em;
 }
-.ribbon:after {
- right: -3em;
- top: 0;
- border-left-width: 1.5em;
- border-right-color: transparent;
-}
+
 .ribbon .ribbon-content:before {
  content: "";
  position: absolute;
@@ -164,10 +147,27 @@ body {
  border-color: #810f14 transparent transparent transparent;
  bottom: -1em;
 }
+
 .ribbon .ribbon-content:before {
  left: 0;
  border-width: 1em 0 0 1.5em;
 }
+
+.ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border: 1.5em solid #d71921;
+ z-index: -1;
+}
+
+.ribbon:after {
+ right: -3em;
+ top: 0;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+
 
 .ink-navigation ul.gnc-nav {
   border-bottom: 3px solid #d71921;
